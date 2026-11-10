@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+name=$USER
+system=$(uname)
+date=$(date)
+messages=("$name" "$system" "$date")
+
+idx=0
+for prefix in "Hello " "Your system is " "Todays is "; do
+    echo "$prefix ${messages[$idx]}"
+    idx=$((idx + 1))
+done
